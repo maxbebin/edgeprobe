@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maxbebin-edgeprobe"
+version = "0.1.0"
+description = "从样本里推断模型的边界问题应有的字段集合，逐字段检查存在性与类型，缺失项单独列出"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "maxbebin" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://maxbebin.github.io"
+Repository = "https://github.com/maxbebin/edgeprobe"
+Issues = "https://github.com/maxbebin/edgeprobe/issues"
+
+[project.scripts]
+edgeprobe = "edgeprobe:main"
+
+[tool.setuptools]
+py-modules = ["edgeprobe"]
